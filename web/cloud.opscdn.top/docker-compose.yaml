@@ -1,0 +1,18 @@
+version: '2.1'
+services:
+  gogs:
+    image: gogs/gogs
+    container_name: gogs
+    volumes:
+    - /root/hack/git/gitdata:/data
+    network_mode: host
+    restart: always
+  caddy:
+    image: abiosoft/caddy
+    container_name: caddy
+    volumes:
+    - /root/hack/git/proxy/ssl:/root/.caddy
+    - /root/hack/git/proxy/log:/var/log/caddy
+    - /root/hack/git/proxy/Caddyfile:/etc/Caddyfile
+    network_mode: host
+    restart: always

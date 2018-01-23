@@ -1,0 +1,6 @@
+cloud.opscdn.top
+gzip
+log /var/log/caddy/access.log
+tls root@ysicing.net
+proxy / localhost:3000
+
