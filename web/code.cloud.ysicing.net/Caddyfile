@@ -1,4 +1,4 @@
-cloud.opscdn.top
+code.cloud.ysicing.net
 gzip
 log /var/log/caddy/access.log
 tls root@ysicing.net

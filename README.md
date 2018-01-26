@@ -1,4 +1,4 @@
-## 1. cloud.opscdn.top
+## 1. code.cloud.ysicing.net
 
 > 本地测试gogs api (gogs + caddy)
 
