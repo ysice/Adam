@@ -16,5 +16,7 @@ WORKDIR /proxy
 COPY index.html /proxy/index.html
 COPY Caddyfile /etc/Caddyfile
 
+ENV TZ=Asia/Shanghai
+
 ENTRYPOINT [ "/usr/local/bin/caddy" ]
 CMD [ "--conf", "/etc/Caddyfile", "--log", "stdout"]
