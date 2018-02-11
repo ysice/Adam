@@ -1,7 +1,7 @@
 FROM debian:stretch-slim
 
 RUN apt-get update && apt-get install -y curl \
-    && curl https://getcaddy.com | bash -s personal http.cache,http.proxyprotocol,http.expires,http.filter,http.forwardproxy,http.git,http.grpc,http.ipfilter,http.locale,http.nobots,http.prometheus,http.ratelimit,http.realip,http.filemanager \
+    && curl https://getcaddy.com | bash -s personal http.cache,http.proxyprotocol,http.expires,http.filter,http.forwardproxy,http.git,http.grpc,http.ipfilter,http.locale,http.nobots,http.prometheus,http.ratelimit,http.realip,http.templates \
  && rm -rf /var/lib/apt/lists/* 
 
 RUN /usr/local/bin/caddy -version
